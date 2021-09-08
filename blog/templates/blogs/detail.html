@@ -41,7 +41,7 @@
 <header>
   <div class="collapse bg-dark" id="navbarHeader" >
     <div class="container">
-      <div class="row">
+      <div >
         <div class="col-sm-8 col-md-7 py-4">
           <h4 class="text-white">About</h4>
           <p class="text-muted">I'm working as a developer in an MNC.I live in AndhraPradesh but I call many places home.I love to play games on/of-line.Anime ♡ love.Pass my time watching Tech videos.</p>
@@ -74,39 +74,25 @@
 
 <main>
 
-  <section class="py-5 text-center container">
-    <div class="row py-lg-5">
-      <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">I'm Hari Krishna</h1>
-        <p class="lead text-muted" >Give me a chance to prove not chances< !/p>
-        <p>
-          <a href="mailto:bena16115.ec@rmkec.ac.in?subject=By looking at your Portfolio?body=Hi Harikrishna,"  class="btn btn-secondary my-2"> Mail me <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
-  <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z"/>
-</svg>
-</svg></a>
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <div class="album py-5 bg-light">
-    <div class="container">
-
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        {% for job in jobs.all %}
+        {% for blog in blogs.all %}
         <div class="col">
           <div class="card shadow-sm">
-            <img class="card-img-top" src="{{job.image.url}}" width="200" height="200"/>
+            <!-- <img class="card-img-top" src="{{blog.image.url}}" width="200" height="200"/> -->
             <div class="card-body">
-              <p class="card-text">{{job.summary}}</p>
-              
+              <p class="card-text">{{blog.title}}</p>
+              <img src="{{blog.image.url}}" width=50% height=50%/>
+              <p class="card-text">{{blog.pubDate}}</p>
+              <p class="card-text">{{blog.summary}}</p>
             </div>
           </div>
-        </div>
-        {% endfor %}
-      </div>
-  </div>
+        {% endfor %}<br/>
+      
 
+
+
+
+
+</div>
 </main>
 
 <footer class="text-muted py-5">
