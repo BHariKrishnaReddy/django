@@ -12,7 +12,7 @@ class Blog(models.Model):
 
 	def summary(self):
 		if len(self.body)>150:
-			return self.body[:150]+". . . ."
+			return self.body[:200]
 		else:
 			return self.body
 
